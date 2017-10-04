@@ -13,7 +13,7 @@ namespace _14DTHC5Web.Controllers
         {
             this.dbContext = new ApplicationDbContext();
         }
-        // DEF (DEV) : 11h
+        /// NEW CODE - NO DEV & LEADER CODE
         /// <summary>
         /// Create New Course
         /// </summary>

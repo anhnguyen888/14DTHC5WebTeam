@@ -168,20 +168,47 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BooksController.cs" />
+    <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709270842273_InitialASPNETIdentityTable.cs" />
+    <Compile Include="Migrations\201709270842273_InitialASPNETIdentityTable.Designer.cs">
+      <DependentUpon>201709270842273_InitialASPNETIdentityTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709270930486_InitialCourse_CategoryTable.cs" />
+    <Compile Include="Migrations\201709270930486_InitialCourse_CategoryTable.Designer.cs">
+      <DependentUpon>201709270930486_InitialCourse_CategoryTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709270938100_AddColumnPriceToCourseTable.cs" />
+    <Compile Include="Migrations\201709270938100_AddColumnPriceToCourseTable.Designer.cs">
+      <DependentUpon>201709270938100_AddColumnPriceToCourseTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709270944179_AddSampleDataToCategory.cs" />
+    <Compile Include="Migrations\201709270944179_AddSampleDataToCategory.Designer.cs">
+      <DependentUpon>201709270944179_AddSampleDataToCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\CourseViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\book-1.png" />
+    <Content Include="Content\images\book-2.png" />
+    <Content Include="Content\images\book-3.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -234,6 +261,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Books\ListBooks.cshtml" />
+    <Content Include="Views\Books\ListBooksAuto.cshtml" />
+    <Content Include="Views\Books\Edit.cshtml" />
+    <Content Include="Views\Courses\CreateCourse.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -245,6 +276,20 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201709270842273_InitialASPNETIdentityTable.resx">
+      <DependentUpon>201709270842273_InitialASPNETIdentityTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709270930486_InitialCourse_CategoryTable.resx">
+      <DependentUpon>201709270930486_InitialCourse_CategoryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709270938100_AddColumnPriceToCourseTable.resx">
+      <DependentUpon>201709270938100_AddColumnPriceToCourseTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709270944179_AddSampleDataToCategory.resx">
+      <DependentUpon>201709270944179_AddSampleDataToCategory.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

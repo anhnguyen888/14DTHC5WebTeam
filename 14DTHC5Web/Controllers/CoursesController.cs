@@ -13,7 +13,11 @@ namespace _14DTHC5Web.Controllers
         {
             this.dbContext = new ApplicationDbContext();
         }
-        // GET: Courses
+        // Create: Courses
+        /// <summary>
+        /// Create New Course
+        /// </summary>
+        /// <returns></returns>
         public ActionResult CreateCourse()
         {
             var courseViewModel = new CourseViewModel()
